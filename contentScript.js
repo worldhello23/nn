@@ -83,11 +83,13 @@ const newVideoLoaded =  () => {
         
         //semantic search button
         const sem_search = document.createElement("button");
-        sem_search.textContent = "donate";
+        sem_search.textContent = "login";
         sem_search.className = "sem-search";
         sem_search.marginLeft = "5px"; 
-        // youtubebar.insertBefore(sem_search, summ.nextSibling);
-       
+        youtubebar.insertBefore(sem_search, summ.nextSibling);
+        sem_search.addEventListener("click", function() {
+        //go to google .com})
+        window.open("https://accounts.google.com/signin")});
 
         
         const divElement = document.createElement("div");
