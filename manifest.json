@@ -1,12 +1,21 @@
 {
     "manifest_version": 3,
+    "key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzao0/Hu0katnqXZACOErkQJtHBNS+vt9/Ebga727ZO9sXVb1pbozyY3iqI/vIFPaNa2E92gWuJGeXBwV5W6FFyzBYuaKoG3K3FgLG32mwObVyLHjc3jcwEDGkPWBB5otTdBTe/A7BPL4IP6RaDf9r+hC2VIEVXYmmnBE0qiepX3Zjrprq1Hfc0Qx6V001AAJ9GV8N8Bip+apqHLnRbSFNZGgFbeD2u3avmiKpUCIY36RG1xw+HkgKbR7iA4+h1oNlRlDlbtQafE7sUEVPZ0NFt9eZklL+eAoIIqMHKcqabJ7YuL+6DgrpS/oquddxImgt/L4A0pJ9g5gUnZaMcSXsQIDAQAB",
     "name": "My YouTube Extension",
+    
+    "oauth2": {
+      "client_id": "268873058737-saul3qcl1q3amcq9tmojemniung09nk4.apps.googleusercontent.com",
+      "scopes":["https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+    },
     "version": "0.1.0",
     "description": "An extension for learning with YouTube videos.",
     "permissions": [
       "tabs",
       "activeTab",
-      "https://us-central1-moonlit-haven-414211.cloudfunctions.net/function-smart"
+      "https://us-central1-moonlit-haven-414211.cloudfunctions.net/function-smart",
+      "identity"
     ],
     
     "host_permissions" : ["https://*.youtube.com/*"],
@@ -27,7 +36,8 @@
   }
   ],
     "action": {
-      "default_popup": "popup.html"
+     
+      "default_title": "FriendBlock, friends face's in a block."
     }
 }
   

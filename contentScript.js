@@ -1,5 +1,9 @@
 const textareaElement = document.createElement("textarea");
 
+
+
+
+
 function doit () {
     chrome.runtime.onMessage.addListener((obj,sender,response) => {
         
@@ -87,10 +91,16 @@ const newVideoLoaded =  () => {
         sem_search.className = "sem-search";
         sem_search.marginLeft = "5px"; 
         youtubebar.insertBefore(sem_search, summ.nextSibling);
-        sem_search.addEventListener("click", function() {
-        //go to google .com})
-        window.open("https://accounts.google.com/signin")});
-
+        sem_search.addEventListener('click', function() {
+            chrome.runtime.sendMessage({action: "sem_search_clicked"})})//, function(response) {
+        //       if (response.error) {
+        //         console.error("Authentication error:", response.error);
+        //       } else {
+        //         console.log("Authentication successful! Token received.");
+        //         // Use the received token here (e.g., send it to another script)
+        //       }
+        //     });
+        //   });
         
         const divElement = document.createElement("div");
     
@@ -254,4 +264,3 @@ async function sendRequestToCloudFunction(text_to_cloud) {
         throw error;
     });
 }
-
